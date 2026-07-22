@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>El Mal Querido | Productos Regionales</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Puedes cambiar esta imagen -->
+    <img
+        src="images/productos.jpg"
+        class="banner"
+        alt="Quesos y productos regionales"
+    >
+
+    <div class="encabezado">
+
+         <h1>
+            El Mal Querido
+        </h1>
+
+        <h2>
+            Quesos, chorizo y carne seca
+        </h2>
+
+        <p class="eslogan">
+            Sabor regional de Saucillo preparado con tradición
+        </p>
+
+    </div>
+
+    <!-- ==========================================
+         QUESO
+    =========================================== -->
+
+    <div class="producto">
+
+        <h3>
+            🧀 Queso
+        </h3>
+
+        <p class="descripcion-producto">
+            Cada unidad seleccionada equivale a medio queso.
+        </p>
+
+        <div class="precio">
+            $120 por medio
+        </div>
+
+        <div class="cantidad">
+
+            <button
+                type="button"
+                class="cantidad-btn"
+                data-producto="queso"
+                data-operacion="menos"
+                aria-label="Quitar medio queso"
+            >
+                −
+            </button>
+
+            <div class="cantidad-informacion">
+
+                <span
+                    class="numero-cantidad"
+                    data-contador="queso"
+                >
+                    0
+                </span>
+
+                <small>
+                    medios
+                </small>
+
+            </div>
+
+            <button
+                type="button"
+                class="cantidad-btn"
+                data-producto="queso"
+                data-operacion="mas"
+                aria-label="Agregar medio queso"
+            >
+                +
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================================
+         CHORIZO
+    =========================================== -->
+
+    <div class="producto">
+
+        <h3>
+            🌶️ Chorizo
+        </h3>
+
+        <p class="descripcion-producto">
+            Cada unidad seleccionada equivale a medio.
+        </p>
+
+        <div class="precio">
+            $120 por medio
+        </div>
+
+        <div class="cantidad">
+
+            <button
+                type="button"
+                class="cantidad-btn"
+                data-producto="chorizo"
+                data-operacion="menos"
+                aria-label="Quitar medio de chorizo"
+            >
+                −
+            </button>
+
+            <div class="cantidad-informacion">
+
+                <span
+                    class="numero-cantidad"
+                    data-contador="chorizo"
+                >
+                    0
+                </span>
+
+                <small>
+                    medios
+                </small>
+
+            </div>
+
+            <button
+                type="button"
+                class="cantidad-btn"
+                data-producto="chorizo"
+                data-operacion="mas"
+                aria-label="Agregar medio de chorizo"
+            >
+                +
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================================
+         CARNE SECA
+    =========================================== -->
+
+    <div class="producto carne-seca-producto">
+
+        <h3>
+            🥩 Carne seca
+        </h3>
+
+        <p class="descripcion-producto">
+            Puedes combinar diferentes sabores.
+        </p>
+
+        <div
+            class="precio precio-carne-seca"
+            id="precioCarneSeca"
+        >
+            $100 por bolsa
+        </div>
+
+        <div class="sabores">
+
+            <!-- Pimienta limón -->
+
+            <div class="sabor-fila">
+
+                <div class="sabor-nombre">
+                    Pimienta limón
+                </div>
+
+                <div class="cantidad cantidad-compacta">
+
+                    <button
+                        type="button"
+                        class="cantidad-btn boton-pequeno"
+                        data-producto="carneSeca"
+                        data-sabor="pimientaLimon"
+                        data-operacion="menos"
+                        aria-label="Quitar carne seca pimienta limón"
+                    >
+                        −
+                    </button>
+
+                    <span
+                        class="numero-cantidad numero-pequeno"
+                        data-contador-carne="pimientaLimon"
+                    >
+                        0
+                    </span>
+
+                    <button
+                        type="button"
+                        class="cantidad-btn boton-pequeno"
+                        data-producto="carneSeca"
+                        data-sabor="pimientaLimon"
+                        data-operacion="mas"
+                        aria-label="Agregar carne seca pimienta limón"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Chipotle -->
+
+            <div class="sabor-fila">
+
+                <div class="sabor-nombre">
+                    Chipotle
+                </div>
+
+                <div class="cantidad cantidad-compacta">
+
+                    <button
+                        type="button"
+                        class="cantidad-btn boton-pequeno"
+                        data-producto="carneSeca"
+                        data-sabor="chipotle"
+                        data-operacion="menos"
+                    >
+                        −
+                    </button>
+
+                    <span
+                        class="numero-cantidad numero-pequeno"
+                        data-contador-carne="chipotle"
+                    >
+                        0
+                    </span>
+
+                    <button
+                        type="button"
+                        class="cantidad-btn boton-pequeno"
+                        data-producto="carneSeca"
+                        data-sabor="chipotle"
+                        data-operacion="mas"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Habanero -->
+
+            <div class="sabor-fila">
+
+                <div class="sabor-nombre">
+                    Habanero
+                </div>
+
+                <div class="cantidad cantidad-compacta">
+
+                    <button
+                        type="button"
+                        class="cantidad-btn boton-pequeno"
+                        data-producto="carneSeca"
+                        data-sabor="habanero"
+                        data-operacion="menos"
+                    >
+                        −
+                    </button>
+
+                    <span
+                        class="numero-cantidad numero-pequeno"
+                        data-contador-carne="habanero"
+                    >
+                        0
+                    </span>
+
+                    <button
+                        type="button"
+                        class="cantidad-btn boton-pequeno"
+                        data-producto="carneSeca"
+                        data-sabor="habanero"
+                        data-operacion="mas"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Fajita -->
+
+            <div class="sabor-fila">
+
+                <div class="sabor-nombre">
+                    Fajita
+                </div>
+
+                <div class="cantidad cantidad-compacta">
+
+                    <button
+                        type="button"
+                        class="cantidad-btn boton-pequeno"
+                        data-producto="carneSeca"
+                        data-sabor="fajita"
+                        data-operacion="menos"
+                    >
+                        −
+                    </button>
+
+                    <span
+                        class="numero-cantidad numero-pequeno"
+                        data-contador-carne="fajita"
+                    >
+                        0
+                    </span>
+
+                    <button
+                        type="button"
+                        class="cantidad-btn boton-pequeno"
+                        data-producto="carneSeca"
+                        data-sabor="fajita"
+                        data-operacion="mas"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Natural -->
+
+            <div class="sabor-fila">
+
+                <div class="sabor-nombre">
+                    Natural
+                </div>
+
+                <div class="cantidad cantidad-compacta">
+
+                    <button
+                        type="button"
+                        class="cantidad-btn boton-pequeno"
+                        data-producto="carneSeca"
+                        data-sabor="natural"
+                        data-operacion="menos"
+                    >
+                        −
+                    </button>
+
+                    <span
+                        class="numero-cantidad numero-pequeno"
+                        data-contador-carne="natural"
+                    >
+                        0
+                    </span>
+
+                    <button
+                        type="button"
+                        class="cantidad-btn boton-pequeno"
+                        data-producto="carneSeca"
+                        data-sabor="natural"
+                        data-operacion="mas"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- BBQ -->
+
+            <div class="sabor-fila">
+
+                <div class="sabor-nombre">
+                    BBQ
+                </div>
+
+                <div class="cantidad cantidad-compacta">
+
+                    <button
+                        type="button"
+                        class="cantidad-btn boton-pequeno"
+                        data-producto="carneSeca"
+                        data-sabor="bbq"
+                        data-operacion="menos"
+                    >
+                        −
+                    </button>
+
+                    <span
+                        class="numero-cantidad numero-pequeno"
+                        data-contador-carne="bbq"
+                    >
+                        0
+                    </span>
+
+                    <button
+                        type="button"
+                        class="cantidad-btn boton-pequeno"
+                        data-producto="carneSeca"
+                        data-sabor="bbq"
+                        data-operacion="mas"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================================
+         FORMULARIO
+    =========================================== -->
+
+    <div class="form">
+
+        <label for="nombre">
+            Nombre
+        </label>
+
+        <input
+            type="text"
+            id="nombre"
+            placeholder="Escribe tu nombre"
+            autocomplete="name"
+        >
+
+        <div class="total">
+
+            <span id="tituloTotal">
+                Total
+            </span>
+
+            <span id="total">
+                $0
+            </span>
+
+            <small
+                id="avisoTotal"
+                class="aviso-total"
+                hidden
+            >
+
+            </small>
+
+        </div>
+
+        <label for="fechaEntrega">
+            Fecha de entrega
+        </label>
+
+        <input
+            type="date"
+            id="fechaEntrega"
+            disabled
+        >
+
+        <div
+            id="fechaAyuda"
+            class="fecha-ayuda"
+        >
+            Primero selecciona al menos un producto.
+        </div>
+
+        <label for="comentarios">
+            Comentarios
+        </label>
+
+        <textarea
+            id="comentarios"
+            placeholder="Ej. Queso sin chile, indicaciones de entrega..."
+        ></textarea>
+
+        <button
+            type="button"
+            class="whatsapp"
+            id="btnWhatsapp"
+        >
+            🟢 Pedir por WhatsApp
+        </button>
+
+    </div>
+
+    <footer>
+        <strong>El Mal Querido</strong>
+        <span>Gracias por apoyar el comercio local</span>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

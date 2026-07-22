@@ -1,0 +1,1009 @@
+/* ============================================================
+   PALETA DE COLORES — EL MAL QUERIDO
+============================================================ */
+
+:root {
+    --negro: #120d09;
+    --negro-suave: #1d1510;
+    --cafe-oscuro: #321d12;
+    --cafe: #5a321d;
+
+    --naranja: #df6422;
+    --naranja-oscuro: #b74613;
+    --naranja-claro: #ed7c32;
+
+    --dorado: #d8a13b;
+    --crema: #ead8b5;
+    --crema-claro: #fffaf0;
+    --crema-medio: #f6ead3;
+
+    --texto: #30241c;
+    --texto-suave: #74675c;
+    --borde: #dfceb2;
+
+    --error: #b42b24;
+
+    --whatsapp: #25d366;
+    --whatsapp-hover: #1dae53;
+}
+
+
+/* ============================================================
+   CONFIGURACIÓN GENERAL
+============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    padding: 30px 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #4a2918 0%,
+            var(--cafe-oscuro) 35%,
+            var(--negro) 100%
+        );
+
+    background-attachment: fixed;
+
+    font-family:
+        Poppins,
+        sans-serif;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font-family:
+        Poppins,
+        sans-serif;
+}
+
+
+/* ============================================================
+   CONTENEDOR PRINCIPAL
+============================================================ */
+
+.container {
+    width: 100%;
+    max-width: 680px;
+
+    overflow: hidden;
+
+    background:
+        var(--crema-claro);
+
+    border:
+        1px solid
+        rgba(234, 216, 181, 0.22);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 18px 45px
+        rgba(0, 0, 0, 0.48);
+}
+
+
+/* ============================================================
+   IMAGEN PRINCIPAL
+============================================================ */
+
+.banner {
+    width: 100%;
+
+    /*
+        Permite que la imagen conserve su proporción original
+        y aparezca completa.
+    */
+    height: auto;
+    max-height: none;
+
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+
+    background:
+        var(--negro);
+}
+
+
+/* ============================================================
+   ENCABEZADO
+============================================================ */
+
+.encabezado {
+    padding:
+        26px
+        24px
+        24px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--negro),
+            var(--cafe-oscuro)
+        );
+
+    border-top:
+        3px solid
+        var(--naranja);
+
+    border-bottom:
+        1px solid
+        rgba(234, 216, 181, 0.22);
+}
+
+
+h1 {
+    color:
+        var(--crema);
+
+    font-size: 34px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.6px;
+
+    text-shadow:
+        0 2px 3px
+        rgba(0, 0, 0, 0.5);
+}
+
+
+h2 {
+    margin-top: 8px;
+
+    color:
+        var(--naranja-claro);
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.eslogan {
+    margin-top: 7px;
+
+    color:
+        #d9c8aa;
+
+    font-size: 13px;
+    font-style: italic;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   PRODUCTOS
+============================================================ */
+
+.producto {
+    padding:
+        26px
+        28px;
+
+    text-align: center;
+
+    background:
+        var(--crema-claro);
+
+    border-bottom:
+        1px solid
+        var(--borde);
+}
+
+
+.producto:nth-of-type(even) {
+    background:
+        var(--crema-medio);
+}
+
+
+.producto h3 {
+    color:
+        var(--cafe-oscuro);
+
+    font-size: 22px;
+    font-weight: 700;
+
+    margin-bottom: 6px;
+}
+
+
+.descripcion-producto {
+    margin-bottom: 14px;
+
+    color:
+        var(--texto-suave);
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   PRECIOS
+============================================================ */
+
+.precio {
+    width: fit-content;
+    min-width: 190px;
+
+    margin:
+        15px
+        auto;
+
+    padding:
+        11px
+        20px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.16);
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--naranja),
+            var(--naranja-oscuro)
+        );
+
+    color:
+        var(--crema-claro);
+
+    font-size: 20px;
+    font-weight: 700;
+
+    box-shadow:
+        0 6px 14px
+        rgba(125, 48, 12, 0.25);
+}
+
+
+.precio-pendiente {
+    background:
+        #e7ded0;
+
+    color:
+        var(--texto-suave);
+
+    font-size: 16px;
+
+    box-shadow: none;
+}
+
+
+/* ============================================================
+   CONTROLES DE CANTIDAD
+============================================================ */
+
+.cantidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.cantidad-btn {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.2);
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--naranja-claro),
+            var(--naranja-oscuro)
+        );
+
+    color:
+        white;
+
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 12px
+        rgba(89, 42, 17, 0.24);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        filter 0.2s;
+}
+
+
+.cantidad-btn:hover {
+    transform:
+        translateY(-2px)
+        scale(1.07);
+
+    filter:
+        brightness(1.06);
+
+    box-shadow:
+        0 8px 16px
+        rgba(89, 42, 17, 0.32);
+}
+
+
+.cantidad-btn:active {
+    transform:
+        scale(0.95);
+}
+
+
+.cantidad-btn:focus-visible {
+    outline:
+        3px solid
+        rgba(223, 100, 34, 0.3);
+
+    outline-offset:
+        3px;
+}
+
+
+.cantidad-informacion {
+    min-width: 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.numero-cantidad {
+    min-width: 36px;
+
+    color:
+        var(--cafe-oscuro);
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+.cantidad-informacion small {
+    color:
+        var(--texto-suave);
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   SABORES DE CARNE SECA
+============================================================ */
+
+.carne-seca-producto {
+    background:
+        linear-gradient(
+            180deg,
+            #f8ebd2,
+            #f1ddba
+        );
+}
+
+
+.sabores {
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+
+.sabor-fila {
+    padding:
+        13px
+        15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    background:
+        rgba(255, 250, 240, 0.94);
+
+    border:
+        1px solid
+        #d8c29d;
+
+    border-left:
+        4px solid
+        var(--naranja);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 10px
+        rgba(63, 35, 19, 0.07);
+}
+
+
+.sabor-nombre {
+    color:
+        var(--cafe-oscuro);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-align: left;
+}
+
+
+.cantidad-compacta {
+    flex-shrink: 0;
+
+    gap: 10px;
+}
+
+
+.boton-pequeno {
+    width: 35px;
+    height: 35px;
+
+    font-size: 21px;
+}
+
+
+.numero-pequeno {
+    min-width: 26px;
+
+    font-size: 20px;
+}
+
+
+/* ============================================================
+   FORMULARIO
+============================================================ */
+
+.form {
+    padding:
+        28px;
+
+    background:
+        var(--crema-claro);
+}
+
+
+label {
+    display: block;
+
+    margin-top: 20px;
+    margin-bottom: 8px;
+
+    color:
+        var(--cafe-oscuro);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding:
+        13px
+        14px;
+
+    border:
+        1px solid
+        #cdbb9f;
+
+    border-radius: 11px;
+
+    background:
+        #ffffff;
+
+    color:
+        var(--texto);
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    color:
+        #9a8d81;
+}
+
+
+input:hover,
+select:hover,
+textarea:hover {
+    border-color:
+        #aa8e6a;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color:
+        var(--naranja);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(223, 100, 34, 0.16);
+}
+
+
+input:disabled {
+    background:
+        #e9e3da;
+
+    color:
+        #8c8279;
+
+    cursor:
+        not-allowed;
+}
+
+
+select {
+    cursor: pointer;
+}
+
+
+textarea {
+    min-height: 105px;
+
+    resize: vertical;
+}
+
+
+/* ============================================================
+   AYUDA Y VALIDACIÓN DE FECHA
+============================================================ */
+
+.fecha-ayuda {
+    margin-top: 8px;
+
+    padding:
+        10px
+        12px;
+
+    border-left:
+        4px solid
+        var(--dorado);
+
+    border-radius:
+        7px;
+
+    background:
+        #f4e8d3;
+
+    color:
+        var(--texto-suave);
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+.fecha-error {
+    border-left-color:
+        var(--error);
+
+    background:
+        #fff0ee;
+
+    color:
+        var(--error);
+
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   TOTAL
+============================================================ */
+
+.total {
+    margin-top: 25px;
+
+    padding:
+        20px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(223, 100, 34, 0.45);
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--negro),
+            var(--cafe-oscuro)
+        );
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 18px
+        rgba(48, 27, 16, 0.2);
+}
+
+
+#tituloTotal {
+    display: block;
+
+    color:
+        var(--crema);
+
+    font-size: 17px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+#total {
+    display: block;
+
+    margin-top: 4px;
+
+    color:
+        var(--naranja-claro);
+
+    font-size: 36px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+.aviso-total {
+    display: block;
+
+    margin-top: 8px;
+
+    color:
+        #e6c998;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
+/* ============================================================
+   BOTÓN WHATSAPP
+============================================================ */
+
+.whatsapp {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 18px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.2);
+
+    border-radius: 12px;
+
+    background:
+        var(--whatsapp);
+
+    color:
+        white;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px
+        rgba(37, 211, 102, 0.25);
+
+    transition:
+        transform 0.2s,
+        background 0.2s,
+        box-shadow 0.2s;
+}
+
+
+.whatsapp:hover {
+    transform:
+        translateY(-2px);
+
+    background:
+        var(--whatsapp-hover);
+
+    box-shadow:
+        0 11px 23px
+        rgba(37, 211, 102, 0.33);
+}
+
+
+.whatsapp:active {
+    transform:
+        scale(0.98);
+}
+
+
+.whatsapp:focus-visible {
+    outline:
+        3px solid
+        rgba(37, 211, 102, 0.35);
+
+    outline-offset:
+        3px;
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+footer {
+    padding:
+        24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--negro),
+            var(--cafe-oscuro)
+        );
+
+    color:
+        #d9c8aa;
+
+    text-align:
+        center;
+
+    border-top:
+        3px solid
+        var(--naranja);
+}
+
+
+footer strong {
+    display: block;
+
+    color:
+        var(--crema);
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+footer span {
+    display: block;
+
+    margin-top: 4px;
+
+    color:
+        #c4ad89;
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   RESPONSIVE — TABLET Y CELULAR
+============================================================ */
+
+@media (max-width: 700px) {
+
+    body {
+        padding:
+            14px
+            8px;
+    }
+
+
+    .container {
+        border-radius:
+            18px;
+    }
+
+
+    /*
+        La imagen continúa mostrándose completa.
+        No se establece una altura fija.
+    */
+    .banner {
+        width:
+            100%;
+
+        height:
+            auto;
+
+        object-fit:
+            contain;
+    }
+
+
+    .encabezado {
+        padding:
+            23px
+            18px
+            21px;
+    }
+
+
+    h1 {
+        font-size:
+            29px;
+    }
+
+
+    h2 {
+        font-size:
+            16px;
+    }
+
+
+    .producto {
+        padding:
+            22px
+            18px;
+    }
+
+
+    .form {
+        padding:
+            24px
+            18px;
+    }
+
+
+    .sabor-fila {
+        padding:
+            12px
+            11px;
+    }
+
+
+    .precio {
+        min-width:
+            175px;
+
+        font-size:
+            18px;
+    }
+
+
+    #total {
+        font-size:
+            33px;
+    }
+
+}
+
+
+/* ============================================================
+   PANTALLAS MUY PEQUEÑAS
+============================================================ */
+
+@media (max-width: 390px) {
+
+    body {
+        padding:
+            8px
+            5px;
+    }
+
+
+    .container {
+        border-radius:
+            14px;
+    }
+
+
+    h1 {
+        font-size:
+            25px;
+    }
+
+
+    .producto h3 {
+        font-size:
+            20px;
+    }
+
+
+    .sabor-fila {
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+    }
+
+
+    .cantidad-compacta {
+        width:
+            100%;
+
+        justify-content:
+            space-between;
+    }
+
+
+    .cantidad-btn {
+        width:
+            43px;
+
+        height:
+            43px;
+    }
+
+
+    .boton-pequeno {
+        width:
+            35px;
+
+        height:
+            35px;
+    }
+
+}
